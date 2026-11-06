@@ -1,9 +1,17 @@
 {
   "name": "dsh-temp-task",
-  "version": "0.6.8",
+  "version": "0.6.9",
   "type": "module",
   "description": "Temporary task zone in the DSH sidebar: one click creates a timestamped folder, a workspace registration and a conversation, with a flat task list above your workspaces.",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/raholly/dsh-temp-task.git"
+  },
+  "homepage": "https://github.com/raholly/dsh-temp-task#readme",
+  "bugs": {
+    "url": "https://github.com/raholly/dsh-temp-task/issues"
+  },
   "keywords": [
     "deepseek-harness",
     "dsh",
