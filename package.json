@@ -1,0 +1,60 @@
+{
+  "name": "dsh-temp-task",
+  "version": "0.6.8",
+  "type": "module",
+  "description": "Temporary task zone in the DSH sidebar: one click creates a timestamped folder, a workspace registration and a conversation, with a flat task list above your workspaces.",
+  "license": "MIT",
+  "keywords": [
+    "deepseek-harness",
+    "dsh",
+    "dsh-plugin",
+    "plugin",
+    "sidebar",
+    "workspace",
+    "temporary",
+    "scratch"
+  ],
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "service.js",
+    "store.js",
+    "trash.js",
+    "errors.js",
+    "client.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg",
+    "README.md",
+    "README_ZH.md",
+    "LICENSE",
+    "docs/images/*.png",
+    "tests/*.js"
+  ],
+  "scripts": {
+    "test": "node --test tests/store.test.js tests/index.test.js tests/trash.test.js"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-connection",
+        "@deepseek-ai/dsh-client-locale",
+        "@deepseek-ai/dsh-client-ui-workspace",
+        "@deepseek-ai/dsh-client-ui-context-menu"
+      ]
+    }
+  }
+}
