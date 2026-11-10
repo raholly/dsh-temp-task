@@ -21,8 +21,11 @@ jobs:
           node-version: 24
           registry-url: https://registry.npmjs.org
 
+      - name: Upgrade npm (stage publish needs >= 11.15)
+        run: npm install --global npm@11.21.2
+
       - name: Test
         run: npm test
 
-      - name: Publish
-        run: npm publish --access public
+      - name: Stage publish (maintainer approves on npmjs.com)
+        run: npm stage publish --access public
